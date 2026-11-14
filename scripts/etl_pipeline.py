@@ -15,13 +15,25 @@ def extract():
 
 
 def transform(rows):
-    """Add a full_name field and normalize country text."""
+    """Add full name and customer segment."""
     transformed = []
+
     for row in rows:
-        row["full_name"] = f'{row["first_name"]} {row["last_name"]}'
-        row["country"] = row["country"].strip()
+        row["full_name"] = (
+            f'{row["first_name"]} {row["last_name"]}'
+        )
+
+        orders = int(row["total_orders"])
+
+        if orders >= 5:
+            row["customer_segment"] = "Premium"
+        else:
+            row["customer_segment"] = "Regular"
+
         transformed.append(row)
+
     return transformed
+
 
 
 def load(rows):
