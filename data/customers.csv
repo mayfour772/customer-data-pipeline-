@@ -1,0 +1,6 @@
+customer_id,first_name,last_name,country,signup_date,total_orders
+101,Asha,Rao,India,2025-01-10,4
+102,Rahul,Sharma,India,2025-02-14,2
+103,Emily,Clark,USA,2025-02-20,7
+104,Daniel,Kim,South Korea,2025-03-01,3
+105,Meera,Iyer,India,2025-03-12,5

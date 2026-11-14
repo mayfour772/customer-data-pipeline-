@@ -1,0 +1,17 @@
+# Python cache and virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Generated ETL output (keep source CSV tracked)
+data/customers_processed.csv
+
+# Local environment and secrets
+.env
+*.log
+
+# Editor / OS files
+.vscode/
+.DS_Store
+Thumbs.db
