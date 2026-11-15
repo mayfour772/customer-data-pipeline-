@@ -41,9 +41,7 @@ def load(rows):
     fieldnames = list(rows[0].keys()) if rows else []
     with OUTPUT_FILE.open("w", newline="", encoding="utf-8") as file:
         writer = csv.DictWriter(file, fieldnames=fieldnames)
-        writer.writeheader()
-        writer.writerows(rows)
-
+       
 
 if __name__ == "__main__":
     source_rows = extract()
